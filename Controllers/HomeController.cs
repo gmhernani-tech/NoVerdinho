@@ -1,6 +1,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using NoVerdinho.Models;
+using NoVerdinho.Models.Login;
 
 namespace NoVerdinho.Controllers
 {
@@ -21,6 +22,18 @@ namespace NoVerdinho.Controllers
         public IActionResult Privacy()
         {
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult Login()
+        {
+            string email = Request.Form["email"];
+            string senha = Request.Form["password"];
+
+            TratamentoLogin tratamento = new TratamentoLogin();
+            TratamentoLogin Model = tratamento.ValidarLogin(email, senha);
+
+            return View("TelaUsuario/TelaUsuario", Model);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
