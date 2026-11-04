@@ -17,18 +17,18 @@ O projeto foi desenvolvido para atender a todos os requisitos de arquitetura com
 ## 🏗️ Estrutura do Repositório
 
 ```text
-src_github/
  ├── README.md                   # Documentação principal do repositório
  ├── setup_database.ps1          # Script PowerShell de inicialização e deploy do banco
  ├── database/                   # Scripts T-SQL (DDL, DML e Objetos Avançados)
- │    └── objetos_avancados.sql
- ├── api/                        # Backend / Controllers / Services (.NET 8)
- │    ├── Controllers/
- │    ├── Models/
- │    └── Services/
- └── frontend/                   # Interface da aplicação (Views ASP.NET MVC / JS / Web)
-      ├── Views/
-      └── wwwroot/
+ │    ├── 01_schema.sql
+ │    ├── 02_objetos_avancados.sql
+ │    └── 03_carga_dados.sql
+ ├── Controllers/                # Backend / Endpoints e Lógica de Negócio (.NET 8)
+ ├── Models/                     # Classes de Domínio e Entidades de Dados
+ ├── Views/                      # Interface da aplicação Front-End (Páginas Razor/HTML)
+ ├── wwwroot/                    # Arquivos estáticos do Front-End (CSS, JS, Imagens)
+ ├── Program.cs                  # Ponto de entrada, configuração do servidor e serviços
+ └── appsettings.json            # Configurações de ambiente e String de Conexão
 ```
 
 🗄️ Arquitetura do Banco de Dados (SQL Server)
