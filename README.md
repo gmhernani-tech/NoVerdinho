@@ -1,7 +1,6 @@
 
 # 💵 NoVerdinho - Sistema de Gestão Financeira Pessoal
 
-
 > **Trabalho Prático Integrado — Disciplina: Banco de Dados Avançado (UNIP)**  
 > **Tecnologias:** C# .NET 8, ASP.NET Core MVC, SQL Server, HTML5/CSS3, JavaScript, PowerShell.
 
@@ -9,9 +8,9 @@
 
 ## 📌 Visão Geral do Projeto
 
-O **NoVerdinho** é uma aplicação Full Stack voltada para a gestão e otimização do orçamento doméstico, controlo de gastos diários e comparativo de preços de mantimentos de mercado. 
+O **NoVerdinho** é uma aplicação Full Stack voltada para a gestão e otimização do orçamento doméstico, controle de gastos diários e comparativo de preços de mantimentos de mercado. 
 
-O projeto foi desenvolvido para atender a todos os requisitos de arquitetura computacional de ponta a ponta, abrangendo desde a automação de infraestrutura no **Microsoft SQL Server** via scripts **PowerShell**, até à implementação de lógica avançada em **T-SQL** (Stored Procedures, Views, Functions, Triggers e Índices), consumida por um ecossistema **.NET 8**.
+O projeto foi desenvolvido para atender a todos os requisitos de arquitetura computacional de ponta a ponta, abrangendo desde a automação de infraestrutura no **Microsoft SQL Server** via scripts **PowerShell**, até a implementação de lógica avançada em **T-SQL** (Stored Procedures, Views, Functions, Triggers e Índices), consumida por um ecossistema **.NET 8**.
 
 ---
 
@@ -32,45 +31,41 @@ src_github/
       └── wwwroot/
 ```
 
-## 🗄️ Arquitetura do Banco de Dados (SQL Server)
-A modelagem relacional foi desenhada no Microsoft SQL Server, garantindo a integridade dos dados e o cumprimento das normas de normalização (3FN).
+🗄️ Arquitetura do Banco de Dados (SQL Server)
+A modelagem relacional foi desenhada no Microsoft SQL Server, garantindo a integridade dos dados e o cumprimento das regras de normalização (3FN).
 
-## 🛠️ Objetos Avançados Implementados
-
+🛠️ Objetos Avançados Implementados
 Stored Procedures (sp_RegistrarGastoSeguro): Encapsula a lógica de negócio para inserção de movimentações financeiras dentro de um bloco transacional explícito (BEGIN TRANSACTION / COMMIT / ROLLBACK), garantindo a propriedade ACID.
 
-Views (vw_ResumoConsolidadoMensal): Unifica as despesas de gastos fixos/variáveis e compras de mercado por utilizador, otimizando relatórios e dashboards.
+Views (vw_ResumoConsolidadoMensal): Unifica as despesas de gastos fixos/variáveis e compras de mercado por usuário, otimizando relatórios e dashboards.
 
-Functions (fn_CalculaComprometimentoRenda): Função escalar que calcula percentualmente o comprometimento da renda líquida do utilizador com base no histórico de despesas do mês selecionado.
+Functions (fn_CalculaComprometimentoRenda): Função escalar que calcula percentualmente o comprometimento da renda líquida do usuário com base no histórico de despesas do mês selecionado.
 
-Triggers (trg_AuditaAlteracaoSalario): Regra de auditoria automática acionada em operações de UPDATE na tabela usuarios, registando o histórico de alterações salariais na tabela audit_log_usuarios.
+Triggers (trg_AuditaAlteracaoSalario): Regra de auditoria automática acionada em operações de UPDATE na tabela de usuários, registrando o histórico de alterações salariais na tabela audit_log_usuarios.
 
-Índices de Otimização (IX_gastos_usuario_data, IX_compras_usuario_data, IX_compra_itens_produto): Índices Não-Agrupados (Non-Clustered) criados para aceleração de pesquisas em consultas frequentes de filtragem por data e utilizador.
+Índices de Otimização (IX_gastos_usuario_data, IX_compras_usuario_data, IX_compra_itens_produto): Índices Não-Agrupados (Non-Clustered) criados para aceleração de pesquisas em consultas frequentes de filtragem por data e usuário.
 
-## 🚀 Como Executar o Projeto
+🚀 Como Executar o Projeto
+Pré-requisitos
 
-Prerequisitos
 .NET 8 SDK instalado.
 
 Microsoft SQL Server ou SQL Server Express LocalDB ((localdb)\MSSQLLocalDB).
 
 PowerShell 5.1+.
 
-1. Automating SQL Server Environment (PowerShell)
-Para criar automaticamente o banco de dados NoVerdinhoDB, criar a estrutura de tabelas e aplicar todos os objetos avançados do T-SQL, executa o script PowerShell incluído no projeto:
+1. Automação do Banco de Dados (PowerShell)
+Para criar automaticamente o banco de dados NoVerdinhoDB, criar a estrutura de tabelas e aplicar todos os objetos avançados do T-SQL, execute o script PowerShell incluído no projeto:
 
-Abre o PowerShell no diretório raiz (src_github).
+Abra o PowerShell no diretório raiz (src_github) e execute o seguinte comando:
 
-Executa o seguinte comando:
 PowerShell
 .\setup_database.ps1
-Nota: O script utiliza o utilitário sqlcmd para ligar à instância (localdb)\MSSQLLocalDB e aprovisionar o ambiente sem intervenção manual.
+Nota: O script utiliza o utilitário sqlcmd para conectar à instância (localdb)\MSSQLLocalDB e provisionar o ambiente sem intervenção manual.
 
 2. Configuração e Execução do Backend/Frontend (.NET 8)
-Garante que a String de Conexão no ficheiro appsettings.json aponta para a tua instância local do SQL Server:
-
-```text
->>>>>>> 81bb9bc (Atualização README)
+Garanta que a String de Conexão no arquivo appsettings.json aponta para a sua instância local do SQL Server:
+```
 JSON
 {
   "ConnectionStrings": {
@@ -78,47 +73,36 @@ JSON
   }
 }
 ```
-
-Executa a aplicação através do terminal do .NET:
+Execute a aplicação através do terminal do .NET:
 
 Bash
 dotnet restore
 dotnet run
-Acede à aplicação no navegador: https://localhost:7198 (ou na porta configurada no teu ambiente).
+Acesse a aplicação no navegador: https://localhost:7198 (ou na porta configurada no seu ambiente).
 
-## 📡 Chamadas e Testes de API / Endpoints
-
+📡 Chamadas e Testes de API / Endpoints
 Abaixo estão listados exemplos de endpoints internos utilizados para integração das funcionalidades:
 
-1. Registar Novo Mercado
+1. Registrar Novo Mercado
 HTTP Method: POST
-
-```text
+```
 Endpoint: /Home/SalvarMercado
 ```
 Payload:
-```text
-=======
-
-Endpoint: /Home/SalvarMercado
-
-Payload:
-
->>>>>>> 81bb9bc (Atualização README)
+```
 JSON
 {
   "nome": "Carrefour Campinas"
 }
-<<<<<<< HEAD
 ```
-2. Registar Compra com Itens
+
+2. Registrar Compra com Itens
 HTTP Method: POST
-```text
+```
 Endpoint: /Home/SalvarCompra
 ```
 Payload:
-
-```text
+```
 JSON
 {
   "mercadoId": 1,
@@ -133,20 +117,14 @@ JSON
   ]
 }
 ```
-3. Consultar Compras do Mês (Filtro Dinâmico)
-HTTP Method: GET
-```text
-Endpoint: /Home/ListarComprasMes?mes=11&ano=2026
-```
-Resposta:
 
 3. Consultar Compras do Mês (Filtro Dinâmico)
 HTTP Method: GET
-```text
+```
 Endpoint: /Home/ListarComprasMes?mes=11&ano=2026
 ```
 Resposta:
-```text
+```
 JSON
 [
   {
@@ -158,11 +136,6 @@ JSON
     "data": "04/11/2026"
   }
 ]
-
 ```
-## 📜 Licença e Autoria
-Trabalho desenvolvido como requisito de avaliação da disciplina de Banco de Dados Avançado na Universidade Paulista (UNIP).
-
 📜 Licença e Autoria
 Trabalho desenvolvido como requisito de avaliação da disciplina de Banco de Dados Avançado na Universidade Paulista (UNIP).
->>>>>>> 81bb9bc (Atualização README)
