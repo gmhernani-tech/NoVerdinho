@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\NoVerdinho.csproj": {}
+    "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\NoVerdinho.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\NoVerdinho.csproj": {
+    "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\NoVerdinho.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\NoVerdinho.csproj",
+        "projectUniqueName": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\NoVerdinho.csproj",
         "projectName": "NoVerdinho",
-        "projectPath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\NoVerdinho.csproj",
+        "projectPath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\NoVerdinho.csproj",
         "packagesPath": "C:\\Users\\gmher\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\obj\\",
+        "outputPath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

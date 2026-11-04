@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MLJekHfuUKk=",
+  "dgSpecHash": "xmylVh0skIM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\NoVerdinho.csproj",
+  "projectFilePath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\NoVerdinho.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gmher\\.nuget\\packages\\microsoft.aspnetcore.authentication.negotiate\\8.0.20\\microsoft.aspnetcore.authentication.negotiate.8.0.20.nupkg.sha512",
     "C:\\Users\\gmher\\.nuget\\packages\\microsoft.aspnetcore.connections.abstractions\\8.0.20\\microsoft.aspnetcore.connections.abstractions.8.0.20.nupkg.sha512",
@@ -34,19 +34,19 @@
     "C:\\Users\\gmher\\.nuget\\packages\\system.security.cryptography.pkcs\\8.0.1\\system.security.cryptography.pkcs.8.0.1.nupkg.sha512",
     "C:\\Users\\gmher\\.nuget\\packages\\system.security.cryptography.protecteddata\\8.0.0\\system.security.cryptography.protecteddata.8.0.0.nupkg.sha512",
     "C:\\Users\\gmher\\.nuget\\packages\\system.threading.ratelimiting\\8.0.0\\system.threading.ratelimiting.8.0.0.nupkg.sha512",
-    "C:\\Users\\gmher\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.31\\microsoft.aspnetcore.app.ref.8.0.31.nupkg.sha512",
-    "C:\\Users\\gmher\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.31\\microsoft.netcore.app.host.win-x64.8.0.31.nupkg.sha512",
+    "C:\\Users\\gmher\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.31\\microsoft.windowsdesktop.app.ref.8.0.31.nupkg.sha512",
     "C:\\Users\\gmher\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.31\\microsoft.netcore.app.ref.8.0.31.nupkg.sha512",
-    "C:\\Users\\gmher\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.31\\microsoft.windowsdesktop.app.ref.8.0.31.nupkg.sha512"
+    "C:\\Users\\gmher\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.31\\microsoft.aspnetcore.app.ref.8.0.31.nupkg.sha512",
+    "C:\\Users\\gmher\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.31\\microsoft.netcore.app.host.win-x64.8.0.31.nupkg.sha512"
   ],
   "logs": [
     {
       "code": "NU1903",
       "level": "Warning",
       "message": "O pacote 'Microsoft.AspNetCore.Authentication.Negotiate' 8.0.20 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-2p3q-h3hg-jcqq",
-      "projectPath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\NoVerdinho.csproj",
+      "projectPath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\NoVerdinho.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\NoVerdinho.csproj",
+      "filePath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\NoVerdinho.csproj",
       "libraryId": "Microsoft.AspNetCore.Authentication.Negotiate",
       "targetGraphs": [
         "net8.0"
@@ -56,9 +56,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "O pacote 'Microsoft.AspNetCore.Authentication.Negotiate' 8.0.20 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-8prm-248r-h957",
-      "projectPath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\NoVerdinho.csproj",
+      "projectPath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\NoVerdinho.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\NoVerdinho.csproj",
+      "filePath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\NoVerdinho.csproj",
       "libraryId": "Microsoft.AspNetCore.Authentication.Negotiate",
       "targetGraphs": [
         "net8.0"
@@ -68,9 +68,9 @@
       "code": "NU1903",
       "level": "Warning",
       "message": "O pacote 'Microsoft.AspNetCore.Authentication.Negotiate' 8.0.20 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-vrrp-6v32-2p8g",
-      "projectPath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\NoVerdinho.csproj",
+      "projectPath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\NoVerdinho.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\NoVerdinho.csproj",
+      "filePath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\NoVerdinho.csproj",
       "libraryId": "Microsoft.AspNetCore.Authentication.Negotiate",
       "targetGraphs": [
         "net8.0"
@@ -80,9 +80,9 @@
       "code": "NU1902",
       "level": "Warning",
       "message": "O pacote 'MySqlConnector' 2.5.0 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-473q-m89c-ghf8",
-      "projectPath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\NoVerdinho.csproj",
+      "projectPath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\NoVerdinho.csproj",
       "warningLevel": 1,
-      "filePath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\NoVerdinho.csproj",
+      "filePath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\NoVerdinho.csproj",
       "libraryId": "MySqlConnector",
       "targetGraphs": [
         "net8.0"

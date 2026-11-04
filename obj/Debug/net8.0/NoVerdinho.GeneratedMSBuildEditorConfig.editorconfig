@@ -12,65 +12,65 @@ build_property.EntryPointFilePath =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = NoVerdinho
 build_property.RootNamespace = NoVerdinho
-build_property.ProjectDir = C:\Users\gmher\OneDrive\Desktop\UNIP\4 Semestre\Banco de Dados\NoVerdinho\NoVerdinho\
+build_property.ProjectDir = C:\Users\gmher\OneDrive\Desktop\UNIP\4 Semestre\Banco de Dados\NP2\NoVerdinho\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\gmher\OneDrive\Desktop\UNIP\4 Semestre\Banco de Dados\NoVerdinho\NoVerdinho
+build_property.MSBuildProjectDirectory = C:\Users\gmher\OneDrive\Desktop\UNIP\4 Semestre\Banco de Dados\NP2\NoVerdinho
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NoVerdinho/NoVerdinho/Views/Home/Cadastro.cshtml]
+[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NP2/NoVerdinho/Views/Home/Cadastro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYWRhc3Ryby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NoVerdinho/NoVerdinho/Views/Home/CalculoCLTePJ.cshtml]
+[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NP2/NoVerdinho/Views/Home/CalculoCLTePJ.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDYWxjdWxvQ0xUZVBKLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NoVerdinho/NoVerdinho/Views/Home/Index.cshtml]
+[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NP2/NoVerdinho/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NoVerdinho/NoVerdinho/Views/Home/Login.cshtml]
+[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NP2/NoVerdinho/Views/Home/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxMb2dpbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NoVerdinho/NoVerdinho/Views/Home/Mercado.cshtml]
+[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NP2/NoVerdinho/Views/Home/Mercado.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxNZXJjYWRvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NoVerdinho/NoVerdinho/Views/Home/NoVerdinho.cshtml]
+[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NP2/NoVerdinho/Views/Home/NoVerdinho.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxOb1ZlcmRpbmhvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NoVerdinho/NoVerdinho/Views/Home/TelaUsuario/TelaUsuario.cshtml]
+[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NP2/NoVerdinho/Views/Home/TelaUsuario/TelaUsuario.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxUZWxhVXN1YXJpb1xUZWxhVXN1YXJpby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NoVerdinho/NoVerdinho/Views/Shared/Error.cshtml]
+[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NP2/NoVerdinho/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NoVerdinho/NoVerdinho/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NP2/NoVerdinho/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NoVerdinho/NoVerdinho/Views/_ViewImports.cshtml]
+[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NP2/NoVerdinho/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NoVerdinho/NoVerdinho/Views/_ViewStart.cshtml]
+[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NP2/NoVerdinho/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NoVerdinho/NoVerdinho/Views/Shared/_Layout.cshtml]
+[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NP2/NoVerdinho/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-vgb0sm7az9
 
-[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NoVerdinho/NoVerdinho/Views/Shared/_LayoutNoVerdinho.cshtml]
+[C:/Users/gmher/OneDrive/Desktop/UNIP/4 Semestre/Banco de Dados/NP2/NoVerdinho/Views/Shared/_LayoutNoVerdinho.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXROb1ZlcmRpbmhvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = b-y6vcxvgoy8
