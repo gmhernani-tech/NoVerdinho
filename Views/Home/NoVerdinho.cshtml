@@ -1,0 +1,259 @@
+﻿@model NoVerdinho.Models.TratamentoNoVerdinho
+@{
+    Layout = "~/Views/Shared/_LayoutNoVerdinho.cshtml";
+}
+
+<div class="container-fluid">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2 class="fw-bold" style="color: var(--nv-sidebar)">Olá, @ViewBag.NomeUsuario! 👋</h2>
+            <p class="text-muted">Aqui está o resumo das suas finanças hoje.</p>
+        </div>
+        <button class="btn btn-success shadow-sm" style="background-color: var(--nv-primary); border: none;" data-bs-toggle="modal" data-bs-target="#modalNovoGasto">
+            <i class="bi bi-plus-lg me-2"></i>Novo Gasto
+        </button>
+    </div>
+
+    <div class="row g-3 mb-4">
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <span class="text-muted fw-bold">SALÁRIO LÍQUIDO</span>
+                        <i class="bi bi-cash-stack text-success fs-4"></i>
+                    </div>
+                    <h3 class="fw-bold mt-2">R$ @Model.salario_liquido.ToString("N2")</h3>
+                    <small class="text-muted">Valor base após descontos</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <span class="text-muted fw-bold">TOTAL DE GASTOS</span>
+                        <i class="bi bi-cart-x text-danger fs-4"></i>
+                    </div>
+                    <h3 class="fw-bold mt-2">R$ @ViewBag.TotalGastos.ToString("N2")</h3>
+                    <div class="progress mt-3" style="height: 8px;">
+                        <div class="progress-bar @(ViewBag.PercentualGastos > 80 ? "bg-danger" : "bg-success")"
+                             role="progressbar"
+                             style="width: @ViewBag.PercentualGastos.ToString("0")%"></div>
+                    </div>
+                    <small class="text-muted d-block mt-2">@ViewBag.PercentualGastos.ToString("0")% do seu orçamento utilizado</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm h-100" style="background-color: var(--nv-sidebar); color: white;">
+                <div class="card-body">
+                    <div class="d-flex justify-content-between">
+                        <span class="fw-bold" style="opacity: 0.8">SALDO DISPONÍVEL</span>
+                        <i class="bi bi-piggy-bank fs-4"></i>
+                    </div>
+                    <h3 class="fw-bold mt-2">R$ @ViewBag.SaldoDisponivel.ToString("N2")</h3>
+                    <small style="opacity: 0.8">O que sobrou para o mês</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-header bg-white border-0 py-3">
+                    <h5 class="fw-bold m-0">Últimas Movimentações</h5>
+                </div>
+                <div class="table-responsive px-3">
+                    <table class="table table-hover align-middle">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Gasto</th>
+                                <th>Categoria</th>
+                                <th>Data</th>
+                                <th>Valor</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if (ViewBag.Movimentacoes != null && ((List<NoVerdinho.Models.GastoItem>)ViewBag.Movimentacoes).Any())
+                            {
+                                foreach (var item in (List<NoVerdinho.Models.GastoItem>)ViewBag.Movimentacoes)
+                                {
+                                    <tr>
+                                        <td>@item.Descricao</td>
+                                        <td>
+                                            <span class="badge @(item.Categoria == "Fixo" ? "bg-primary" : "bg-warning text-dark")">
+                                                @if (item.Categoria == "Fixo")
+                                                {
+                                                    <i class="bi bi-pin-angle-fill me-1"></i>
+                                                }
+                                                @item.Categoria
+                                            </span>
+                                        </td>
+                                        <td>@item.Data.ToString("dd/MM/yyyy")</td>
+                                        <td class="fw-bold">R$ @item.Valor.ToString("N2")</td>
+                                        <td>
+                                            <i class="bi bi-pencil-square text-muted cursor-pointer btn-editar"
+                                               data-id="@item.Id"
+                                               data-descricao="@item.Descricao"
+                                               data-categoria="@item.Categoria"
+                                               data-valor="@item.Valor">
+                                            </i>
+                                        </td>
+                                    </tr>
+                                }
+                            }
+                            else
+                            {
+                                <tr>
+                                    <td colspan="5" class="text-center text-muted py-4">
+                                        <i class="bi bi-info-circle me-2"></i>Nenhum gasto lançado este mês.
+                                    </td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-header bg-white border-0 py-3">
+                    <h5 class="fw-bold m-0"><i class="bi bi-search me-2 text-success"></i>Radar NoVerdinho</h5>
+                </div>
+                <div class="card-body pt-0">
+                    <p class="small text-muted">Melhores preços encontrados por você:</p>
+
+                    @if (ViewBag.Radar != null && ((IEnumerable<dynamic>)ViewBag.Radar).Any())
+                    {
+                        foreach (var item in ViewBag.Radar)
+                        {
+                            <div class="d-flex align-items-center mb-3 p-2 rounded-3 border-start border-4 border-success bg-light">
+                                <div class="fs-4 me-3">🛒</div>
+                                <div>
+                                    <h6 class="m-0 fw-bold">@item.Produto</h6>
+                                    <small class="text-success fw-bold">R$ @item.Preco.ToString("N2")</small>
+                                    <span class="text-muted small"> no @item.Mercado</span>
+                                </div>
+                            </div>
+                        }
+                    }
+                    else
+                    {
+                        <div class="text-center py-4">
+                            <i class="bi bi-info-circle text-muted fs-2"></i>
+                            <p class="small text-muted mt-2">Lance suas compras para ver os melhores preços aqui!</p>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalNovoGasto" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+            <form id="formGasto" asp-controller="Home" asp-action="SalvarGasto" method="post">
+                <input type="hidden" name="Id" id="gastoId">
+                <div class="modal-header bg-success text-white">
+                    <h5 class="modal-title fw-bold">Lançar Novo Gasto</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <div class="mb-3">
+                        <label class="form-label small fw-bold text-muted">DESCRIÇÃO</label>
+                        <input type="text" name="Descricao" class="form-control" placeholder="Ex: Aluguel, Internet, Mercado" required>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label small fw-bold text-muted">CATEGORIA</label>
+                            <select name="Categoria" class="form-select" required>
+                                <option value="Fixo">Fixo</option>
+                                <option value="Variável">Variável</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label class="form-label small fw-bold text-muted">VALOR (R$)</label>
+                            <input type="number" name="Valor" class="form-control" step="0.01" placeholder="0.00" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="submit" class="btn btn-success w-100 fw-bold">SALVAR GASTO</button>
+                </div>
+                <div class="modal-footer border-0">
+                    <button type="button" class="btn btn-danger" id="btnExcluir">Excluir</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="modalComparativo" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header">
+                <h5 class="modal-title fw-bold">Comparativo de Mercados</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-hover m-0">
+                        <thead class="table-light">
+                            <tr>
+                                <th>Produto</th>
+                                <th>Mercado A</th>
+                                <th>Mercado B</th>
+                                <th>Melhor Preço</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.querySelectorAll('.btn-editar').forEach(btn => {
+            btn.addEventListener('click', function () {
+
+                document.getElementById('gastoId').value = this.dataset.id;
+                document.querySelector('[name="Descricao"]').value = this.dataset.descricao;
+                document.querySelector('[name="Categoria"]').value = this.dataset.categoria;
+                document.querySelector('[name="Valor"]').value = this.dataset.valor;
+
+                document.querySelector('.modal-title').innerText = "Editar Gasto";
+                document.querySelector('button[type="submit"]').innerText = "ATUALIZAR GASTO";
+
+                let modal = new bootstrap.Modal(document.getElementById('modalNovoGasto'));
+                modal.show();
+            });
+        });
+
+        document.getElementById('btnExcluir')?.addEventListener('click', function () {
+
+            let id = document.getElementById('gastoId').value;
+
+            if (!id) return;
+
+            if (!confirm('Deseja excluir este gasto?')) return;
+
+            fetch('/Home/ExcluirGasto', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ id })
+            })
+            .then(() => location.reload());
+        });
+    </script>
+}

@@ -1,0 +1,160 @@
+﻿/* Variáveis de Cor - Nota de Real */
+:root {
+    --nv-primary: #7DBA4E !important;
+    --nv-sidebar: #2D461E !important;
+    --nv-bg-light: #C7E0B4 !important;
+    --sidebar-width: 70px;
+    --sidebar-expanded: 260px;
+}
+
+body {
+    background-color: white !important; /* Forçando o verde claro */
+    margin: 0 !important;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Sidebar Sólida */
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    background-color: #2D461E !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1100;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+    .sidebar:hover {
+        width: var(--sidebar-expanded);
+    }
+
+/* Links do Menu */
+.nav-link-custom {
+    display: flex;
+    align-items: center;
+    padding: 18px 22px;
+    color: white !important;
+    text-decoration: none !important;
+    white-space: nowrap;
+}
+
+    .nav-link-custom:hover {
+        background-color: #7DBA4E !important;
+    }
+
+    .nav-link-custom i {
+        font-size: 1.5rem;
+        min-width: 30px;
+        text-align: center;
+    }
+
+    .nav-link-custom span {
+        margin-left: 20px;
+        opacity: 0;
+        transition: 0.2s;
+    }
+
+.sidebar:hover .nav-link-custom span {
+    opacity: 1;
+}
+
+/* Garante que o menu suspenso apareça por cima de tudo */
+.dropdown-menu {
+    z-index: 1200 !important;
+    background-color: white !important;
+    border: 1px solid var(--nv-primary) !important;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.dropdown-item:hover {
+    background-color: var(--nv-accent) !important;
+    color: var(--nv-sidebar) !important;
+}
+
+/* Topbar Branca */
+.top-nav {
+    position: fixed;
+    top: 0;
+    left: var(--sidebar-width);
+    right: 0;
+    height: 70px;
+    background: white !important;
+    display: flex;
+    align-items: center;
+    padding: 0 25px;
+    border-bottom: 4px solid #7DBA4E !important;
+    background-color: #C7E0B4 !important; /* Forçando o verde claro */
+    z-index: 1000;
+    overflow: visible !important; /* CRÍTICO: Se estiver 'hidden', o dropdown não aparece */
+}
+
+/* Área do Conteúdo */
+.main-content {
+    margin-left: var(--sidebar-width);
+    padding: 100px 30px 30px 30px;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    border-top: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Atualização no CSS da Sidebar Header */
+.sidebar-header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza a logo quando recolhido */
+    padding: 0 10px;
+    background: rgba(0,0,0,0.2);
+    transition: all 0.3s;
+}
+
+/* Container do Logo (Flex) */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+    /* Estilo da Imagem do Logo */
+    .logo-wrapper img {
+        height: 50px; /* Define a altura ideal para a sidebar */
+        width: auto;
+        transition: margin 0.3s;
+    }
+
+/* Estilo do Texto ao lado do Logo */
+.logo-text {
+    margin-left: 12px;
+    font-weight: 800;
+    font-size: 1.3rem;
+    color: white;
+    opacity: 0; /* Esconde o texto por padrão */
+    transition: opacity 0.2s ease;
+}
+
+/* Comportamento quando a Sidebar EXPANDIR */
+.sidebar:hover .logo-header {
+    justify-content: flex-start; /* Alinha à esquerda ao expandir */
+    padding-left: 18px;
+}
+
+.sidebar:hover .logo-text {
+    opacity: 1; /* Mostra o texto ao expandir */
+}
+
+/* Esconde o texto por padrão */
+#txtLogo {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Quando a sidebar (pai) estiver em hover, o txtLogo (filho) aparece */
+.sidebar:hover #txtLogo {
+    opacity: 1;
+}

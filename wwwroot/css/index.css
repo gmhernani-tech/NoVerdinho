@@ -1,0 +1,39 @@
+.navbar-custom {
+    background-color: #2D461E;
+    border-bottom: 1px solid #ddd;
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #6cc24a !important;
+}
+
+.nav-link {
+    color: !important;
+    margin-right: 15px;
+}
+
+.btn-proposta {
+    background-color: #8cc63f;
+    color: white;
+    border-radius: 5px;
+}
+
+    .btn-proposta:hover {
+        background-color: #6fa82f;
+    }
+
+.header {
+    background: url('/imgs/fundo_index.jpeg') no-repeat center center;
+    background-size: cover;
+    height: 400px;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+}
+
+    .header h1 {
+        font-size: 40px;
+        font-weight: bold;
+    }

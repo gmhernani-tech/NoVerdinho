@@ -1,24 +1,52 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-    
+﻿@model NoVerdinho.Models.Login.TratamentoLogin
+@{
+    ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="text-center">
-    <h1 class="display-4">No Verdinho 2</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<div class="body-cadastro-container">
+    <div class="cadastro-card animate__animated animate__fadeIn">
 
-<div>
-    <h2>Login</h2>
-    <form method="post" asp-action="Login">
-        <div class="mb-3">
-            <label for="username" class="form-label">Email</label>
-            <input type="text" class="form-control" id="email" name="email" required />
+        <div class="text-center mb-4">
+            <h2 class="title-verde">No<span class="text-destaque">Verdinho</span></h2>
+            <p class="text-muted">Acesse sua conta para gerenciar seu patamar financeiro.</p>
         </div>
-        <div class="mb-3">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" class="form-control" id="password" name="password" />
+
+        @if (ViewBag.Erro != null)
+        {
+            <div class="alert alert-custom-erro">
+                <i class="fas fa-exclamation-circle"></i> @ViewBag.Erro
+            </div>
+        }
+
+        <form asp-controller="Home" asp-action="ValidarLogin" method="post">
+
+            <div class="form-floating mb-3">
+                <input type="email" name="email" class="form-control input-custom" id="Email" placeholder="nome@exemplo.com" required>
+                <label for="Email">E-mail</label>
+            </div>
+
+            <div class="form-floating mb-4">
+                <input type="password" name="senha" class="form-control input-custom" id="Senha" placeholder="Senha" required>
+                <label for="Senha">Senha</label>
+            </div>
+
+            <button type="submit" class="btn-primary-noverdinho w-100 py-3 mb-3">
+                ENTRAR NO SISTEMA
+            </button>
+
+        </form>
+
+        <div class="text-center">
+            <span class="text-muted small">Não possui uma conta?</span> <br>
+            <a asp-action="Cadastro" class="link-verde">Criar minha conta agora</a>
         </div>
-        <button type="submit" class="btn btn-primary">Login</button>
-    </form>
+
+        <hr class="my-4">
+
+        <a asp-controller="Home" asp-action="Index" class="btn-voltar-discreto w-100">
+            <i class="fas fa-arrow-left"></i> Voltar para Home
+        </a>
+
+    </div>
 </div>

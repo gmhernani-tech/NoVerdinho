@@ -1,0 +1,316 @@
+﻿@model NoVerdinho.Models.TratamentoNoVerdinho
+@{
+    ViewData["Title"] = "Gestão de Mercado";
+    Layout = "~/Views/Shared/_LayoutNoVerdinho.cshtml";
+}
+
+<div class="container-fluid">
+    <h2 class="fw-bold mb-4" style="color: var(--nv-sidebar)">📦 Controle de Mantimentos</h2>
+
+    <ul class="nav nav-pills mb-4" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active fw-bold" id="pills-compra-tab" data-bs-toggle="pill" data-bs-target="#pills-compra" type="button">🛒 Compra do Mês</button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link fw-bold" id="pills-cadastro-tab" data-bs-toggle="pill" data-bs-target="#pills-cadastro" type="button">➕ Cadastros</button>
+        </li>
+    </ul>
+
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-compra" role="tabpanel">
+            <div class="card border-0 shadow-sm mb-4">
+                <div class="card-body">
+                    <div class="row align-items-end mb-4">
+                        <div class="col-md-3">
+                            <select class="form-select" id="filtroMes">
+                                <option value="4" selected>Abril / 2026</option>
+                                <option value="5">Maio / 2026</option>
+                            </select>
+
+                            <tbody id="listaCompras">
+                            </tbody>
+                        </div>
+                        <div class="col-md-6 text-end">
+                            <h5 class="m-0 text-muted">Total no Mês: <span class="text-success fw-bold" id="totalMes">R$ 0,00</span></h5>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-success w-100 fw-bold" data-bs-toggle="modal" data-bs-target="#modalNovoItem">
+                                <i class="bi bi-cart-plus me-2"></i>Lançar Produto
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="table table-hover align-middle">
+                            <thead class="table-light">
+                                <tr>
+                                    <th>Produto</th>
+                                    <th>Mercado</th>
+                                    <th>Valor</th>
+                                    <th>Data</th>
+                                    <th class="text-center">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody id="listaCompras"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="pills-cadastro" role="tabpanel">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="fw-bold mb-3"><i class="bi bi-shop me-2"></i>Mercados</h5>
+                            <div class="input-group mb-3">
+                                <input type="text" id="nomeMercado" class="form-control form-control-sm" placeholder="Novo mercado...">
+                                <button class="btn btn-success btn-sm" type="button" id="btnSalvarMercado">Salvar</button>
+                            </div>
+                            <ul class="list-group list-group-flush small" id="listaMercados" style="max-height: 200px; overflow-y: auto;"></ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="fw-bold mb-3"><i class="bi bi-box-seam me-2"></i>Produtos</h5>
+                            <div class="input-group mb-3">
+                                <input type="text" id="nomeProduto" class="form-control form-control-sm" placeholder="Ex: Feijão 1kg...">
+                                <button class="btn btn-success btn-sm" type="button" id="btnSalvarProduto">Salvar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card border-0 shadow-sm mb-4">
+                        <div class="card-body">
+                            <h5 class="fw-bold mb-4" style="color: var(--nv-sidebar)"><i class="bi bi-cart-plus me-2"></i>Novo Lançamento</h5>
+                            <form id="formCompra">
+                                <div class="row g-3">
+                                    <div class="col-md-4">
+                                        <label class="form-label small fw-bold text-muted">MERCADO</label>
+                                        <select class="form-select" id="selectMercado" required></select>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <label class="form-label small fw-bold text-muted">DESCRIÇÃO</label>
+                                        <input type="text" class="form-control" id="descricaoCompra" placeholder="Ex: Compra do mês">
+                                    </div>
+                                    <div class="col-md-3">
+                                        <label class="form-label small fw-bold text-muted">DATA</label>
+                                        <input type="date" class="form-control" id="dataCompra" value="@DateTime.Now.ToString("yyyy-MM-dd")">
+                                    </div>
+                                </div>
+
+                                <hr class="my-4">
+                                <div id="containerItens">
+                                    <div class="row g-2 mb-2 item-compra">
+                                        <div class="col-md-5">
+                                            <select class="form-select select-produto" required></select>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <input type="number" class="form-control qtd-item" placeholder="Qtd" min="1" value="1">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <input type="number" step="0.01" class="form-control valor-unitario" placeholder="Preço">
+                                        </div>
+                                        <div class="col-md-2">
+                                            <input type="text" class="form-control total-item" placeholder="Total" readonly>
+                                        </div>
+                                        <div class="col-md-1">
+                                            <button type="button" class="btn btn-outline-danger btn-remover-linha"><i class="bi bi-trash"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="btn btn-outline-success btn-sm mt-2" id="btnAddLinha">
+                                    <i class="bi bi-plus-circle me-1"></i> Adicionar produto
+                                </button>
+
+                                <div class="text-end mt-4">
+                                    <h4 class="mb-3">Total: <span class="text-success" id="totalGeralCompra">R$ 0,00</span></h4>
+                                    <button type="submit" class="btn btn-success btn-lg px-5 fw-bold shadow">SALVAR COMPRA</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            carregarMercados();
+            carregarProdutos();
+        });
+
+        function atualizarValores() {
+            let totalGeral = 0;
+            document.querySelectorAll('.item-compra').forEach(linha => {
+                const qtd = parseFloat(linha.querySelector('.qtd-item').value) || 0;
+                const valor = parseFloat(linha.querySelector('.valor-unitario').value) || 0;
+                const total = qtd * valor;
+                linha.querySelector('.total-item').value = total.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                totalGeral += total;
+            });
+            document.getElementById('totalGeralCompra').innerText = totalGeral.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+        }
+
+        document.addEventListener('input', (e) => {
+            if (e.target.classList.contains('qtd-item') || e.target.classList.contains('valor-unitario')) {
+                atualizarValores();
+            }
+        });
+
+        document.getElementById('btnAddLinha').addEventListener('click', () => {
+            const container = document.getElementById('containerItens');
+            const novaLinha = document.querySelector('.item-compra').cloneNode(true);
+            novaLinha.querySelectorAll('input').forEach(i => i.value = '');
+            novaLinha.querySelector('.qtd-item').value = 1;
+            container.appendChild(novaLinha);
+        });
+
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.btn-remover-linha')) {
+                const linhas = document.querySelectorAll('.item-compra');
+                if (linhas.length > 1) {
+                    e.target.closest('.item-compra').remove();
+                    atualizarValores();
+                }
+            }
+        });
+
+        document.getElementById('btnSalvarMercado').addEventListener('click', () => {
+            let nome = document.getElementById('nomeMercado').value;
+            if (!nome) return;
+            fetch('/Home/SalvarMercado', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ Nome: nome })
+            }).then(res => {
+                if (res.ok) {
+                    document.getElementById('nomeMercado').value = '';
+                    carregarMercados();
+                }
+            });
+        });
+
+        document.getElementById('btnSalvarProduto').addEventListener('click', () => {
+            let nome = document.getElementById('nomeProduto').value;
+            if (!nome) return;
+            fetch('/Home/SalvarProduto', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ nome: nome })
+            }).then(res => {
+                if (res.ok) {
+                    document.getElementById('nomeProduto').value = '';
+                    carregarProdutos();
+                }
+            });
+        });
+
+        document.getElementById('formCompra').addEventListener('submit', function (e) {
+            e.preventDefault();
+            const mercadoId = document.getElementById('selectMercado').value;
+            const data = document.getElementById('dataCompra').value;
+            const itens = [];
+
+            document.querySelectorAll('.item-compra').forEach(linha => {
+                const pId = linha.querySelector('.select-produto').value;
+                const qtd = linha.querySelector('.qtd-item').value;
+                const valor = linha.querySelector('.valor-unitario').value;
+
+                if (pId && qtd && valor) {
+                    itens.push({
+                        produtoId: parseInt(pId),
+                        quantidade: parseInt(qtd),
+                        valorUnitario: parseFloat(valor)
+                    });
+                }
+            });
+
+            if (!mercadoId || itens.length === 0) {
+                alert('Preencha os dados corretamente.');
+                return;
+            }
+
+            fetch('/Home/SalvarCompra', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    mercadoId: parseInt(mercadoId),
+                    dataCompra: data,
+                    descricao: document.getElementById('descricaoCompra').value,
+                    itens: itens
+                })
+            }).then(res => res.ok ? location.reload() : alert('Erro ao salvar compra.'));
+        });
+
+        function carregarMercados() {
+            fetch('/Home/ListarMercados').then(r => r.json()).then(data => {
+                document.querySelectorAll('#selectMercado, #selectMercadoModal').forEach(s => {
+                    s.innerHTML = '<option value="">Selecione...</option>' +
+                        data.map(m => `<option value="${m.id}">${m.nome}</option>`).join('');
+                });
+            });
+        }
+
+        function carregarProdutos() {
+            fetch('/Home/ListarProdutos').then(r => r.json()).then(data => {
+                document.querySelectorAll('.select-produto, #selectProdutoModal').forEach(s => {
+                    const valorAnterior = s.value;
+                    s.innerHTML = '<option value="">Selecione...</option>' +
+                        data.map(p => `<option value="${p.id}">${p.nome}</option>`).join('');
+                    s.value = valorAnterior;
+                });
+            });
+        }
+
+        function carregarTabelaCompras() {
+            const mes = document.getElementById('filtroMes').value;
+            const ano = 2026; 
+
+            fetch(`/Home/ListarComprasMes?mes=${mes}&ano=${ano}`)
+                .then(r => r.json())
+                .then(dados => {
+                    const tbody = document.getElementById('listaCompras');
+                    let html = '';
+                    let totalGeral = 0;
+
+                    if (dados.length === 0) {
+                        html = '<tr><td colspan="5" class="text-center text-muted">Nenhuma compra encontrada para este mês.</td></tr>';
+                    } else {
+                        dados.forEach(item => {
+                            const totalItem = item.valor * item.qtd;
+                            totalGeral += totalItem;
+
+                            html += `
+                                <tr>
+                                    <td>${item.produto} <small class="text-muted">(${item.qtd}x)</small></td>
+                                    <td>${item.mercado}</td>
+                                    <td class="fw-bold text-success">R$ ${totalItem.toLocaleString('pt-BR', {minimumFractionDigits: 2})}</td>
+                                    <td>${item.data}</td>
+                                    <td class="text-center">
+                                        <button class="btn btn-sm btn-outline-danger" onclick="deletarItem(${item.id})">
+                                            <i class="bi bi-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>`;
+                        });
+                    }
+
+                    tbody.innerHTML = html;
+                    document.getElementById('totalMes').innerText = totalGeral.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' });
+                });
+        }
+
+        document.getElementById('filtroMes').addEventListener('change', carregarTabelaCompras);
+    </script>
+}

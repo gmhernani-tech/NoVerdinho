@@ -1,0 +1,209 @@
+﻿@model NoVerdinho.Models.TratamentoNoVerdinho
+@{
+    ViewData["Title"] = "Cálculo de Rendimentos";
+    Layout = "~/Views/Shared/_LayoutNoVerdinho.cshtml";
+}
+
+<div class="container-fluid">
+    <form asp-controller="Home" asp-action="CalculoCLTePJ" method="post" id="formCalculo">
+        <input type="hidden" name="UsuarioID" value="@Model.UsuarioID" />
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-sm mb-4">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold mb-4 text-success border-bottom pb-2">
+                            <i class="bi bi-person-workspace me-2"></i>Dados Principais
+                        </h5>
+
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label small fw-bold text-muted">REGIME DE TRABALHO</label>
+                                <select name="Regime" class="form-select form-select-lg" id="regime" onchange="UpdateRegime(this.value, @Model.UsuarioID)">
+                                    <option value="CLT" selected="@(Model?.regime_Trabalho == "CLT")">CLT (Carteira Assinada)</option>
+                                    <option value="PJ" selected="@(Model?.regime_Trabalho == "PJ")">PJ (Prestador de Serviço)</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label small fw-bold text-muted">SALÁRIO BRUTO (R$)</label>
+                                <input type="text" id="inputSalarioVisual" class="form-control form-control-lg" value="@Model.salario_bruto" oninput="formatarMoeda(this); sincronizarSalarioBruto(this.value);" onchange="UpdateSalarioBruto(document.getElementById('salarioBrutoReal').value, @Model.UsuarioID)" required>
+                                <input type="hidden" name="salario_bruto" id="salarioBrutoReal" value="@Model.salario_bruto">
+                            </div>
+                        </div>
+
+                        <h5 class="fw-bold mb-3 mt-4 text-success border-bottom pb-2">
+                            <i class="bi bi-patch-minus me-2"></i>Descontos Personalizados
+                        </h5>
+                        <p class="text-muted small">Adicione descontos como Convênio, VT, Previdência ou Empréstimos.</p>
+
+                        <div id="containerDescontos">
+                        </div>
+
+                        <button type="button" class="btn btn-outline-success btn-sm mt-3 fw-bold" onclick="addDesconto()">
+                            <i class="bi bi-plus-circle me-1"></i> ADICIONAR NOVO DESCONTO
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="card border-0 shadow-sm h-100 bg-white">
+                    <div class="card-body p-4 d-flex flex-column justify-content-center text-center">
+                        <div id="placeholderResult">
+                            <i class="bi bi-calculator text-light" style="font-size: 5rem;"></i>
+                            <h4 class="text-muted mt-3">Pronto para Calcular?</h4>
+                            <p class="text-muted">Preencha os dados ao lado e clique no botão abaixo para processar os impostos e descontos no servidor.</p>
+                        </div>
+
+                        <button type="submit" class="btn btn-success btn-lg w-100 py-3 fw-bold shadow mt-auto">
+                            EFETUAR CÁLCULO <i class="bi bi-arrow-right ms-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            @if (Model == null || Model.salario_liquido <= 0)
+            {
+                <div id="placeholderResult" class="text-center my-auto">
+                    <i class="bi bi-calculator text-light" style="font-size: 5rem;"></i>
+                    <h4 class="text-muted mt-3">Pronto para Calcular?</h4>
+                    <p class="text-muted">Preencha os dados ao lado e clique no botão abaixo para processar os impostos e descontos no servidor.</p>
+                </div>
+            }
+            else
+            {
+                <div id="resultadoTabela">
+                    <h5 class="fw-bold mb-3 text-success border-bottom pb-2">
+                        <i class="bi bi-receipt me-2"></i>Resumo do Cálculo
+                    </h5>
+
+                    <div class="table-responsive">
+                        <table class="table table-sm table-hover align-middle">
+                            <thead class="table-light text-secondary" style="font-size: 0.85rem;">
+                                <tr>
+                                    <th>Descrição</th>
+                                    <th class="text-center">Ref. (%)</th>
+                                    <th class="text-end">Vencimentos</th>
+                                    <th class="text-end">Descontos</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="fw-bold text-dark">Salário Base (@Model.regime_Trabalho)</td>
+                                    <td class="text-center text-muted">-</td>
+                                    <td class="text-end text-success fw-bold">R$ @Model.salario_bruto.ToString("N2")</td>
+                                    <td class="text-end text-muted">-</td>
+                                </tr>
+
+                                @if (Model.ListaDescontos != null && Model.ListaDescontos.Any())
+                                {
+                                    foreach (var desc in Model.ListaDescontos)
+                                    {
+                                        <tr>
+                                            <td class="text-dark">@desc.Nome</td>
+                                            <td class="text-center text-muted">
+                                                @(desc.Porcentagem > 0 ? desc.Porcentagem.ToString("N2") + "%" : "-")
+                                            </td>
+                                            <td class="text-end text-muted">-</td>
+                                            <td class="text-end text-danger">- R$ @desc.Valor.ToString("N2")</td>
+                                        </tr>
+                                    }
+                                }
+                            </tbody>
+                            <tfoot class="table-group-divider">
+                                <tr>
+                                    <th colspan="2" class="text-end text-muted align-middle">Salário Líquido Estimado:</th>
+                                    <th colspan="2" class="text-end text-success" style="font-size: 1.5rem; font-weight: 900;">
+                                        R$ @Model.salario_liquido.ToString("N2")
+                                    </th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            }
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // 1. Configura o botão de carregamento
+            const form = document.getElementById("formCalculo");
+            if (form) {
+                form.onsubmit = function() {
+                    const btn = this.querySelector('button[type="submit"]');
+                    if (btn) {
+                        btn.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span>PROCESSANDO...';
+                        btn.classList.add('disabled');
+                    }
+                };
+            }
+
+            // 2. Adiciona a primeira linha de desconto de forma segura
+            const container = document.getElementById('containerDescontos');
+            if (container) {
+                addDesconto();
+            }
+        });
+
+        let descontoIndex = 0;
+
+        function addDesconto() {
+            const container = document.getElementById('containerDescontos');
+            const row = document.createElement('div');
+            row.className = 'row mb-3 align-items-end';
+
+            row.innerHTML = `
+                <div class="col-md-5">
+                    <label class="form-label mini-label">DESCRIÇÃO</label>
+                    <input type="text" name="ListaDescontos[${descontoIndex}].Nome" class="form-control" placeholder="Ex: Convênio" required>
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label mini-label">DESC. (%)</label>
+                    <input type="text" name="ListaDescontos[${descontoIndex}].Porcentagem" class="form-control input-porcentagem" oninput="atualizarValores()">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label mini-label">VALOR (R$)</label>
+                    <input type="text" name="ListaDescontos[${descontoIndex}].Valor" class="form-control input-valor-calculado" readonly tabindex="-1">
+                </div>
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-outline-danger btn-sm mb-1" onclick="removerDesconto(this)"><i class="bi bi-trash"></i></button>
+                </div>
+            `;
+
+            container.appendChild(row);
+            descontoIndex++;
+        }
+
+        function removerDesconto(botao) {
+            // Remove a linha HTML inteira
+            botao.parentElement.parentElement.remove();
+            // Chama a função para recalcular o total, já que um desconto foi removido
+            atualizarValores();
+        }
+
+        // Adiciona uma linha inicial por padrão
+        window.onload = addDesconto;
+    </script>
+
+    <style>
+        .mini-label {
+            font-size: 0.65rem;
+            font-weight: 800;
+            color: #6c757d;
+            text-transform: uppercase;
+            margin-bottom: 3px;
+        }
+
+        #containerDescontos .form-control {
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+        }
+
+            #containerDescontos .form-control:focus {
+                border-color: var(--nv-primary);
+                box-shadow: none;
+            }
+    </style>
+}

@@ -2,7 +2,8 @@
 {
     public class TratamentoLogin
     {
-
+        public string Email { get; set; }
+        public string Senha { get; set; }
 
         public TratamentoLogin ValidarLogin(string email, string senha)
         {

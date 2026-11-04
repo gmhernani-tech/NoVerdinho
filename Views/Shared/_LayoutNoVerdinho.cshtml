@@ -1,0 +1,146 @@
+﻿@using Microsoft.AspNetCore.Http
+@inject IHttpContextAccessor HttpContextAccessor
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - NoVerdinho</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/NoVerdinho.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo-wrapper">
+                <img src="~/imgs/NoVerdinho.png" alt="Logo">
+                <span style="color:white; font-weight:bold; margin-left:10px; opacity:0; transition:0.3s;" id="txtLogo"></span>
+            </div>
+        </div>
+
+        <nav style="flex-grow: 1;">
+            <a asp-controller="Home" asp-action="NoVerdinho" class="nav-link-custom">
+                <i class="bi bi-grid-1x2-fill"></i><span>Dashboard</span>
+            </a>
+            <a asp-controller="Home" asp-action="CalculoCLTePJ" asp-route-id="@HttpContextAccessor.HttpContext.Session.GetInt32("UsuarioID")" class="nav-link-custom">
+                <i class="bi bi-calculator-fill"></i><span>Cálculo CLT/PJ</span>
+            </a>
+            <a asp-controller="Home" asp-action="Mercado" class="nav-link-custom">
+                <i class="bi bi-cart4"></i><span>Radar Mercado</span>
+            </a>
+        </nav>
+    </aside>
+
+    <header class="top-nav justify-content-between">
+        <h5 class="m-0 fw-bold" style="color: var(--nv-sidebar)">Gestão Financeira</h5>
+        <div class="dropdown">
+            <a href="#" class="text-decoration-none dropdown-toggle d-flex align-items-center"
+               id="userMenu" data-bs-toggle="dropdown" aria-expanded="false" style="color: var(--nv-sidebar)">
+                <i class="bi bi-person-circle fs-4 me-2"></i><span>@HttpContextAccessor.HttpContext.Session.GetString("Nome")</span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-end shadow">
+                <li>
+                    <a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modalTrocarSenha">
+                        <i class="bi bi-key me-2"></i>Trocar Senha
+                    </a>
+                </li>
+                <li><hr class="dropdown-divider"></li>
+                <li><a asp-controller="Home" asp-action="Index" class="dropdown-item text-danger">Sair</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main role="main" class="main-content">
+        @RenderBody()
+    </main>
+
+    <div class="modal fade" id="modalTrocarSenha" tabindex="-1" aria-labelledby="modalTrocarSenhaLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow">
+                <div class="modal-header" style="background-color: var(--nv-sidebar); color: white;">
+                    <h5 class="modal-title fw-bold" id="modalTrocarSenhaLabel"><i class="bi bi-shield-lock me-2"></i>Alterar Senha</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="formTrocarSenha">
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold text-muted">SENHA ANTIGA</label>
+                            <input type="password" class="form-control" id="senhaAntiga" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold text-muted">NOVA SENHA</label>
+                            <input type="password" class="form-control" id="senhaNova" required>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label small fw-bold text-muted">CONFIRMAR NOVA SENHA</label>
+                            <input type="password" class="form-control" id="senhaConfirmar" required>
+                        </div>
+                        <div class="text-end mt-4">
+                            <button type="button" class="btn btn-light fw-bold" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-success fw-bold px-4" style="background-color: var(--nv-sidebar); border: none;">Atualizar Senha</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+    <script>
+        // Faz o texto do logo aparecer no hover da sidebar
+        const sidebar = document.querySelector('.sidebar');
+        const txtLogo = document.querySelector('#txtLogo');
+        sidebar.addEventListener('mouseenter', () => txtLogo.style.opacity = '1');
+        sidebar.addEventListener('mouseleave', () => txtLogo.style.opacity = '0');
+
+        document.getElementById('formTrocarSenha').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const senhaAntiga = document.getElementById('senhaAntiga').value;
+            const senhaNova = document.getElementById('senhaNova').value;
+            const senhaConfirmar = document.getElementById('senhaConfirmar').value;
+
+            if (senhaNova !== senhaConfirmar) {
+                alert("A nova senha e a confirmação não coincidem!");
+                return;
+            }
+
+            fetch('/Home/TrocarSenha', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    SenhaAntiga: senhaAntiga,
+                    SenhaNova: senhaNova
+                })
+            })
+            .then(res => {
+                if (res.ok) {
+                    alert("Senha alterada com sucesso!");
+                    location.reload();
+                } else {
+                    return res.text().then(text => { throw new Error(text) });
+                }
+            })
+            .catch(err => alert(err.message));
+        });
+    </script>
+</body>
+</html>

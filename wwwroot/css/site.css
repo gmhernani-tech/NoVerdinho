@@ -1,22 +1,165 @@
-html {
-  font-size: 14px;
+/* INDEX - ESTILO NOVERDINHO */
+
+.header {
+    background: linear-gradient(rgba(45, 70, 30, 0.6), rgba(45, 70, 30, 0.6)), url('/imgs/fundo_index.jpeg') no-repeat center center;
+    background-size: cover;
+    height: 600px; /* Aumentei para dar mais impacto */
+    color: white;
+    display: flex;
+    align-items: center;
+    padding-left: 80px; /* Mais espaço na esquerda */
+    border-radius: 20px; /* Bordas arredondadas no banner */
+    margin-top: 20px;
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
+    .header h1 {
+        font-size: 52px; /* Fonte maior para impacto */
+        font-weight: 800;
+        line-height: 1.2;
+        text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        margin-bottom: 30px;
+    }
+
+/* O "NoVerdinho" no texto com destaque */
+.text-highlight {
+    color: #8cc63f;
 }
 
-.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+.btn-cta {
+    background: linear-gradient(135deg, #6cc24a, #8cc63f);
+    color: white !important;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 50px; /* Botão arredondado estilo moderno */
+    text-transform: uppercase;
+    transition: 0.3s all ease;
+    border: none;
+    box-shadow: 0 4px 15px rgba(108, 194, 74, 0.4);
+    text-decoration: none;
+    display: inline-block;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
+    .btn-cta:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 25px rgba(108, 194, 74, 0.6);
+        background: linear-gradient(135deg, #8cc63f, #6cc24a);
+    }
+
+/* Ajuste da Navbar para combinar */
+.navbar-custom {
+    background-color: #2D461E;
+    border-bottom: 3px solid #6cc24a;
+    padding: 1rem 0;
 }
 
-body {
-  margin-bottom: 60px;
+
+/* Estilos Exclusivos para a Tela de Cadastro */
+.body-cadastro-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh; /* Ajusta para não bater na navbar */
+    padding: 40px 15px;
 }
+
+.cadastro-card {
+    background: #ffffff;
+    width: 100%;
+    max-width: 500px;
+    padding: 45px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(45, 70, 30, 0.15);
+    border-top: 6px solid #2D461E;
+}
+
+.title-verde {
+    color: #2D461E;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+.text-destaque {
+    color: #6cc24a;
+}
+
+/* Estilização dos Inputs Floating */
+.input-custom {
+    border: 1px solid #e1e1e1;
+    border-radius: 10px !important;
+}
+
+    .input-custom:focus {
+        border-color: #6cc24a;
+        box-shadow: 0 0 0 0.25rem rgba(108, 194, 74, 0.15);
+    }
+
+/* Botão Principal NoVerdinho */
+.btn-primary-noverdinho {
+    background: linear-gradient(135deg, #2D461E, #1e2f14);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+    .btn-primary-noverdinho:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        background: linear-gradient(135deg, #6cc24a, #8cc63f);
+    }
+
+.link-verde {
+    color: #6cc24a;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+    .link-verde:hover {
+        color: #2D461E;
+        text-decoration: underline;
+    }
+
+.btn-voltar-discreto {
+    background: transparent;
+    color: #999;
+    border: none;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: 0.2s;
+    display: inline-block;
+    text-align: center;
+}
+
+    .btn-voltar-discreto:hover {
+        color: #2D461E;
+    }
+
+.alert-custom-erro {
+    background-color: #fff5f5;
+    color: #e53e3e;
+    border: 1px solid #feb2b2;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: 500;
+}
+
+.btn-login {
+    background-color: #FFFFFF !important;
+    color: #2D461E !important; /* Verde do NoVerdinho */
+    font-weight: bold;
+    border-radius: 20px;
+    padding: 6px 25px;
+    border: none;
+    transition: 0.3s ease;
+}
+
+    .btn-login:hover {
+        background-color: #E9ECEF !important;
+        transform: translateY(-2px); /* Efeito de levante no hover */
+    }
