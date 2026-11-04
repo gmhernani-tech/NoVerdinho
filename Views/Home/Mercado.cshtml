@@ -23,8 +23,9 @@
                     <div class="row align-items-end mb-4">
                         <div class="col-md-3">
                             <select class="form-select" id="filtroMes">
-                                <option value="4" selected>Abril / 2026</option>
+                                <option value="4">Abril / 2026</option>
                                 <option value="5">Maio / 2026</option>
+                                <option value="11">Novembro / 2026</option>
                             </select>
 
                             <tbody id="listaCompras">
@@ -32,11 +33,6 @@
                         </div>
                         <div class="col-md-6 text-end">
                             <h5 class="m-0 text-muted">Total no Mês: <span class="text-success fw-bold" id="totalMes">R$ 0,00</span></h5>
-                        </div>
-                        <div class="col-md-3">
-                            <button class="btn btn-success w-100 fw-bold" data-bs-toggle="modal" data-bs-target="#modalNovoItem">
-                                <i class="bi bi-cart-plus me-2"></i>Lançar Produto
-                            </button>
                         </div>
                     </div>
 
@@ -148,6 +144,7 @@
         document.addEventListener('DOMContentLoaded', () => {
             carregarMercados();
             carregarProdutos();
+            carregarTabelaCompras();
         });
 
         function atualizarValores() {

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Guilherme\\Desktop\\NoVerdinho\\NoVerdinho.csproj": {}
+    "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\NoVerdinho.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Guilherme\\Desktop\\NoVerdinho\\NoVerdinho.csproj": {
+    "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\NoVerdinho.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Guilherme\\Desktop\\NoVerdinho\\NoVerdinho.csproj",
+        "projectUniqueName": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\NoVerdinho.csproj",
         "projectName": "NoVerdinho",
-        "projectPath": "C:\\Users\\Guilherme\\Desktop\\NoVerdinho\\NoVerdinho.csproj",
-        "packagesPath": "C:\\Users\\Guilherme\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Guilherme\\Desktop\\NoVerdinho\\obj\\",
+        "projectPath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\NoVerdinho.csproj",
+        "packagesPath": "C:\\Users\\gmher\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\Guilherme\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\gmher\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -45,7 +46,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.200"
+        "SdkAnalysisLevel": "10.0.400"
       },
       "frameworks": {
         "net8.0": {
@@ -55,6 +56,10 @@
             "Microsoft.AspNetCore.Authentication.Negotiate": {
               "target": "Package",
               "version": "[8.0.20, )"
+            },
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[7.1.1, )"
             },
             "MySqlConnector": {
               "target": "Package",
@@ -72,6 +77,24 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[8.0.31, 8.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.win-x64",
+              "version": "[8.0.31, 8.0.31]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[8.0.31, 8.0.31]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[8.0.31, 8.0.31]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -80,7 +103,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.203/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
