@@ -1,1 +1,34 @@
-[]
+[
+  {
+    "ContainingType": "NoVerdinho.Controllers.Api.GastosApiController",
+    "Method": "PostGasto",
+    "RelativePath": "api/GastosApi",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "NoVerdinho.Controllers.Api.GastoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NoVerdinho.Controllers.Api.GastosApiController",
+    "Method": "GetGastos",
+    "RelativePath": "api/GastosApi/{usuarioId}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "usuarioId",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

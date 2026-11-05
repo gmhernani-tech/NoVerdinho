@@ -1,53 +1,73 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\",
+  "WorkspaceRootPath": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\noverdinho\\noverdinho\\views\\home\\mercado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:views\\home\\mercado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\np2\\noverdinho\\wwwroot\\js\\app-gastos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:wwwroot\\js\\app-gastos.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\noverdinho\\noverdinho\\views\\shared\\_layoutnoverdinho.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:views\\shared\\_layoutnoverdinho.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\noverdinho\\noverdinho\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\noverdinho\\noverdinho\\models\\dbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:models\\dbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\noverdinho\\noverdinho\\models\\tratamentonoverdinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:models\\tratamentonoverdinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\noverdinho\\noverdinho\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\noverdinho\\noverdinho\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\noverdinho\\noverdinho\\views\\home\\calculocltepj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:views\\home\\calculocltepj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\noverdinho\\noverdinho\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\noverdinho\\noverdinho\\views\\home\\noverdinho.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\np2\\noverdinho\\views\\home\\noverdinho.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:views\\home\\noverdinho.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\noverdinho\\noverdinho\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\np2\\noverdinho\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\np2\\noverdinho\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\np2\\noverdinho\\controllers\\api\\gastosapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:controllers\\api\\gastosapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\np2\\noverdinho\\models\\tratamentonoverdinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:models\\tratamentonoverdinho.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\np2\\noverdinho\\models\\dbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:models\\dbservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\np2\\noverdinho\\models\\login\\tratamentologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:models\\login\\tratamentologin.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\np2\\noverdinho\\models\\cadastro\\tratamentocadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:models\\cadastro\\tratamentocadastro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\np2\\noverdinho\\views\\home\\mercado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:views\\home\\mercado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\np2\\noverdinho\\views\\shared\\_layoutnoverdinho.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:views\\shared\\_layoutnoverdinho.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\np2\\noverdinho\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\np2\\noverdinho\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\np2\\noverdinho\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\np2\\noverdinho\\views\\home\\calculocltepj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:views\\home\\calculocltepj.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\np2\\noverdinho\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\noverdinho\\noverdinho\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "AbsoluteMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|c:\\users\\gmher\\onedrive\\desktop\\unip\\4 semestre\\banco de dados\\np2\\noverdinho\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
       "RelativeMoniker": "D:0:0:{DCE7F86E-CF06-A437-4321-0B9AADC3BC36}|NoVerdinho.csproj|solutionrelative:wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     }
   ],
@@ -66,19 +86,54 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{004be353-6879-467c-9d1e-9ac23cdf6d49}"
-            },
-            {
-              "$type": "Bookmark",
               "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAE4AAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-11-05T00:02:52.112Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "app-gastos.js",
+              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\wwwroot\\js\\app-gastos.js",
+              "RelativeDocumentMoniker": "wwwroot\\js\\app-gastos.js",
+              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\wwwroot\\js\\app-gastos.js",
+              "RelativeToolTip": "wwwroot\\js\\app-gastos.js",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAQwD8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2026-11-05T00:00:25.885Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "GastosApiController.cs",
+              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Controllers\\Api\\GastosApiController.cs",
+              "RelativeDocumentMoniker": "Controllers\\Api\\GastosApiController.cs",
+              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Controllers\\Api\\GastosApiController.cs",
+              "RelativeToolTip": "Controllers\\Api\\GastosApiController.cs",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAIwFAAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-04T23:59:26.888Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Mercado.cshtml",
-              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\Views\\Home\\Mercado.cshtml",
+              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Views\\Home\\Mercado.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Mercado.cshtml",
-              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\Views\\Home\\Mercado.cshtml",
+              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Views\\Home\\Mercado.cshtml",
               "RelativeToolTip": "Views\\Home\\Mercado.cshtml",
               "ViewState": "AgIAAAsAAAAAAAAAAAAswBgAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
@@ -87,11 +142,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "DbService.cs",
-              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\Models\\DbService.cs",
+              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Models\\DbService.cs",
               "RelativeDocumentMoniker": "Models\\DbService.cs",
-              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\Models\\DbService.cs",
+              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Models\\DbService.cs",
               "RelativeToolTip": "Models\\DbService.cs",
               "ViewState": "AgIAAAoAAAAAAAAAAAAAAA4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -100,63 +155,99 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\appsettings.json",
-              "RelativeDocumentMoniker": "appsettings.json",
-              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\appsettings.json",
-              "RelativeToolTip": "appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-05-01T15:13:27.017Z",
-              "EditorCaption": ""
+              "DocumentIndex": 10,
+              "Title": "_LayoutNoVerdinho.cshtml",
+              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Views\\Shared\\_LayoutNoVerdinho.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutNoVerdinho.cshtml",
+              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Views\\Shared\\_LayoutNoVerdinho.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_LayoutNoVerdinho.cshtml",
+              "ViewState": "AgIAAF4AAAAAAAAAAAAcwHIAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-29T02:19:40.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-25T17:50:15.893Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CalculoCLTePJ.cshtml",
+              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Views\\Home\\CalculoCLTePJ.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\CalculoCLTePJ.cshtml",
+              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Views\\Home\\CalculoCLTePJ.cshtml",
+              "RelativeToolTip": "Views\\Home\\CalculoCLTePJ.cshtml",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAowGAAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-25T17:28:19.672Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "_LayoutNoVerdinho.cshtml",
-              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\Views\\Shared\\_LayoutNoVerdinho.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_LayoutNoVerdinho.cshtml",
-              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\Views\\Shared\\_LayoutNoVerdinho.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_LayoutNoVerdinho.cshtml",
-              "ViewState": "AgIAAF4AAAAAAAAAAAAcwHIAAAAfAAAAAAAAAA==",
+              "Title": "NoVerdinho.cshtml",
+              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Views\\Home\\NoVerdinho.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\NoVerdinho.cshtml",
+              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Views\\Home\\NoVerdinho.cshtml",
+              "RelativeToolTip": "Views\\Home\\NoVerdinho.cshtml",
+              "ViewState": "AgIAANIAAAAAAAAAAAAQwOMAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-29T02:19:40.809Z",
+              "WhenOpened": "2026-04-29T00:13:12.214Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 8,
+              "Title": "TratamentoCadastro.cs",
+              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Models\\Cadastro\\TratamentoCadastro.cs",
+              "RelativeDocumentMoniker": "Models\\Cadastro\\TratamentoCadastro.cs",
+              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Models\\Cadastro\\TratamentoCadastro.cs",
+              "RelativeToolTip": "Models\\Cadastro\\TratamentoCadastro.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-25T17:50:15.893Z",
+              "WhenOpened": "2026-11-04T23:36:24.133Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAQwDcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-25T19:10:16.95Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "CalculoCLTePJ.cshtml",
-              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\Views\\Home\\CalculoCLTePJ.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\CalculoCLTePJ.cshtml",
-              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\Views\\Home\\CalculoCLTePJ.cshtml",
-              "RelativeToolTip": "Views\\Home\\CalculoCLTePJ.cshtml",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAowGAAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-25T17:28:19.672Z",
+              "Title": "TratamentoLogin.cs",
+              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Models\\Login\\TratamentoLogin.cs",
+              "RelativeDocumentMoniker": "Models\\Login\\TratamentoLogin.cs",
+              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Models\\Login\\TratamentoLogin.cs",
+              "RelativeToolTip": "Models\\Login\\TratamentoLogin.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-11-04T23:36:27.2Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "HomeController.cs",
-              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\Controllers\\HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Controllers\\HomeController.cs",
               "RelativeToolTip": "Controllers\\HomeController.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAAABYAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -165,24 +256,36 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "TratamentoNoVerdinho.cs",
-              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\Models\\TratamentoNoVerdinho.cs",
+              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Models\\TratamentoNoVerdinho.cs",
               "RelativeDocumentMoniker": "Models\\TratamentoNoVerdinho.cs",
-              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\Models\\TratamentoNoVerdinho.cs",
+              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Models\\TratamentoNoVerdinho.cs",
               "RelativeToolTip": "Models\\TratamentoNoVerdinho.cs",
-              "ViewState": "AgIAADoAAAAAAAAAAAAxwEAAAAArAAAAAAAAAA==",
+              "ViewState": "AgIAADoAAAAAAAAAAADwv0AAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-25T19:26:16.249Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-05-01T15:13:27.017Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "site.css",
-              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\wwwroot\\css\\site.css",
+              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "wwwroot\\css\\site.css",
-              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\wwwroot\\css\\site.css",
               "RelativeToolTip": "wwwroot\\css\\site.css",
               "ViewState": "AgIAAIEAAAAAAAAAAAAmwI0AAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
@@ -190,39 +293,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "NoVerdinho.cshtml",
-              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\Views\\Home\\NoVerdinho.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\NoVerdinho.cshtml",
-              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\Views\\Home\\NoVerdinho.cshtml",
-              "RelativeToolTip": "Views\\Home\\NoVerdinho.cshtml",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAAAHkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-29T00:13:12.214Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\Views\\Home\\Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Views\\Home\\Login.cshtml",
               "RelativeDocumentMoniker": "Views\\Home\\Login.cshtml",
-              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\Views\\Home\\Login.cshtml",
+              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NP2\\NoVerdinho\\Views\\Home\\Login.cshtml",
               "RelativeToolTip": "Views\\Home\\Login.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADMAAAAGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2026-04-25T19:06:00.652Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\gmher\\OneDrive\\Desktop\\UNIP\\4 Semestre\\Banco de Dados\\NoVerdinho\\NoVerdinho\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAswD8AAAAHAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-04-25T19:10:16.95Z"
             }
           ]
         },
