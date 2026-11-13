@@ -17,6 +17,48 @@
   },
   {
     "ContainingType": "NoVerdinho.Controllers.Api.GastosApiController",
+    "Method": "PutGasto",
+    "RelativePath": "api/GastosApi/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "request",
+        "Type": "NoVerdinho.Controllers.Api.GastoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NoVerdinho.Controllers.Api.GastosApiController",
+    "Method": "DeleteGasto",
+    "RelativePath": "api/GastosApi/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "usuarioId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NoVerdinho.Controllers.Api.GastosApiController",
     "Method": "GetGastos",
     "RelativePath": "api/GastosApi/{usuarioId}",
     "HttpMethod": "GET",

@@ -46,7 +46,7 @@ namespace NoVerdinho.Controllers.Api
             return Ok(gastos);
         }
 
-        // POST: api/gastosapi
+        // POST: api/gastosapi (Consome a Stored Procedure com Transação)
         [HttpPost]
         public IActionResult PostGasto([FromBody] GastoDto request)
         {
@@ -54,7 +54,6 @@ namespace NoVerdinho.Controllers.Api
             {
                 using (var connection = new SqlConnection(_connectionString))
                 {
-                    // Consumo da Stored Procedure com transação embutida
                     var command = new SqlCommand("sp_RegistrarGastoSeguro", connection);
                     command.CommandType = CommandType.StoredProcedure;
 
@@ -71,6 +70,65 @@ namespace NoVerdinho.Controllers.Api
             catch (Exception ex)
             {
                 return StatusCode(500, new { erro = "Falha ao registar gasto.", detalhe = ex.Message });
+            }
+        }
+
+        // PUT: api/gastosapi/5
+        [HttpPut("{id}")]
+        public IActionResult PutGasto(int id, [FromBody] GastoDto request)
+        {
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                {
+                    var query = "UPDATE gastos SET descricao = @Descricao, categoria = @Categoria, valor = @Valor WHERE id = @Id AND usuario_id = @UsuarioId";
+                    var command = new SqlCommand(query, connection);
+
+                    command.Parameters.AddWithValue("@Id", id);
+                    command.Parameters.AddWithValue("@UsuarioId", request.UsuarioId);
+                    command.Parameters.AddWithValue("@Descricao", request.Descricao);
+                    command.Parameters.AddWithValue("@Categoria", request.Categoria);
+                    command.Parameters.AddWithValue("@Valor", request.Valor);
+
+                    connection.Open();
+                    int linhasAfetadas = command.ExecuteNonQuery();
+
+                    if (linhasAfetadas == 0)
+                        return NotFound(new { erro = "Gasto não encontrado para atualização." });
+                }
+                return Ok(new { mensagem = "Gasto atualizado com sucesso!" });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { erro = "Falha ao atualizar gasto.", detalhe = ex.Message });
+            }
+        }
+
+        // DELETE: api/gastosapi/5
+        [HttpDelete("{id}")]
+        public IActionResult DeleteGasto(int id, [FromQuery] int usuarioId)
+        {
+            try
+            {
+                using (var connection = new SqlConnection(_connectionString))
+                {
+                    var query = "DELETE FROM gastos WHERE id = @Id AND usuario_id = @UsuarioId";
+                    var command = new SqlCommand(query, connection);
+
+                    command.Parameters.AddWithValue("@Id", id);
+                    command.Parameters.AddWithValue("@UsuarioId", usuarioId);
+
+                    connection.Open();
+                    int linhasAfetadas = command.ExecuteNonQuery();
+
+                    if (linhasAfetadas == 0)
+                        return NotFound(new { erro = "Gasto não encontrado para exclusão." });
+                }
+                return Ok(new { mensagem = "Gasto excluído com sucesso!" });
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, new { erro = "Falha ao excluir gasto.", detalhe = ex.Message });
             }
         }
     }

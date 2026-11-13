@@ -208,3 +208,4 @@ function carregarProdutos() {
         })
         .catch(err => console.error("Erro ao carregar produtos:", err));
 }
+

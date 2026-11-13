@@ -158,7 +158,7 @@
 <div class="modal fade" id="modalNovoGasto" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content border-0 shadow">
-            <form id="formGasto" asp-controller="Home" asp-action="SalvarGasto" method="post">
+            <form id="formGasto">
                 <input type="hidden" name="Id" id="gastoId">
                 <div class="modal-header bg-success text-white">
                     <h5 class="modal-title fw-bold">Lançar Novo Gasto</h5>
@@ -223,38 +223,129 @@
 </div>
 
 @section Scripts {
-    <script src="~/js/app-gastos.js"></script>
     <script>
-        document.querySelectorAll('.btn-editar').forEach(btn => {
-            btn.addEventListener('click', function () {
+        function carregarGastosDaApi(usuarioId) {
+            fetch(`/api/gastosapi/${usuarioId}`)
+                .then(response => response.json())
+                .then(data => {
+                    let tbody = document.querySelector('table tbody');
+                    if (!tbody) return;
 
-                document.getElementById('gastoId').value = this.dataset.id;
-                document.querySelector('[name="Descricao"]').value = this.dataset.descricao;
-                document.querySelector('[name="Categoria"]').value = this.dataset.categoria;
-                document.querySelector('[name="Valor"]').value = this.dataset.valor;
+                    if (data.length === 0) {
+                        tbody.innerHTML = `
+                                    <tr>
+                                        <td colspan="5" class="text-center text-muted py-4">
+                                            <i class="bi bi-info-circle me-2"></i>Nenhum gasto lançado este mês.
+                                        </td>
+                                    </tr>`;
+                        return;
+                    }
 
-                document.querySelector('.modal-title').innerText = "Editar Gasto";
-                document.querySelector('button[type="submit"]').innerText = "ATUALIZAR GASTO";
+                    let html = '';
+                    data.forEach(item => {
+                        let badgeClass = item.categoria === "Fixo" ? "bg-primary" : "bg-warning text-dark";
+                        let iconeFixo = item.categoria === "Fixo" ? '<i class="bi bi-pin-angle-fill me-1"></i>' : '';
 
-                let modal = new bootstrap.Modal(document.getElementById('modalNovoGasto'));
-                modal.show();
-            });
+                        html += `
+                                    <tr>
+                                        <td>${item.descricao}</td>
+                                        <td>
+                                            <span class="badge ${badgeClass}">
+                                                ${iconeFixo}${item.categoria}
+                                            </span>
+                                        </td>
+                                        <td>${item.dataGasto || '-'}</td>
+                                        <td class="fw-bold">R$ ${item.valor.toLocaleString('pt-BR', { minimumFractionDigits: 2 })}</td>
+                                        <td>
+                                            <i class="bi bi-pencil-square text-muted cursor-pointer btn-editar"
+                                               data-id="${item.id}"
+                                               data-descricao="${item.descricao}"
+                                               data-categoria="${item.categoria}"
+                                               data-valor="${item.valor}">
+                                            </i>
+                                        </td>
+                                    </tr>`;
+                    });
+                    tbody.innerHTML = html;
+                })
+                .catch(error => console.error('Erro ao carregar gastos:', error));
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            let usuarioIdLogado = 1;
+            carregarGastosDaApi(usuarioIdLogado);
         });
 
+        // Delegação de eventos para o botão Editar (funciona com elementos dinâmicos)
+        document.addEventListener('click', function (e) {
+            let btn = e.target.closest('.btn-editar');
+            if (!btn) return;
+
+            document.getElementById('gastoId').value = btn.dataset.id;
+            document.querySelector('[name="Descricao"]').value = btn.dataset.descricao;
+            document.querySelector('[name="Categoria"]').value = btn.dataset.categoria;
+            document.querySelector('[name="Valor"]').value = btn.dataset.valor;
+
+            document.querySelector('.modal-title').innerText = "Editar Gasto";
+            document.querySelector('button[type="submit"]').innerText = "ATUALIZAR GASTO";
+
+            let modal = new bootstrap.Modal(document.getElementById('modalNovoGasto'));
+            modal.show();
+        });
+
+        // Excluir gasto consumindo a API DELETE
         document.getElementById('btnExcluir')?.addEventListener('click', function () {
-
             let id = document.getElementById('gastoId').value;
-
+            let usuarioId = 1; // ID do usuário logado
             if (!id) return;
-
             if (!confirm('Deseja excluir este gasto?')) return;
 
-            fetch('/Home/ExcluirGasto', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ id })
+            fetch(`/api/gastosapi/${id}?usuarioId=${usuarioId}`, {
+                method: 'DELETE'
             })
-            .then(() => location.reload());
+                .then(response => {
+                    if (response.ok) {
+                        location.reload();
+                    } else {
+                        alert('Erro ao excluir o gasto.');
+                    }
+                })
+                .catch(error => console.error('Erro:', error));
+        });
+
+        // Enviar formulário: Cria (POST) se não houver ID, ou Edita (PUT) se houver ID
+        document.getElementById('formGasto').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            let id = document.getElementById('gastoId').value;
+            let payload = {
+                usuarioId: 1,
+                descricao: document.querySelector('[name="Descricao"]').value,
+                categoria: document.querySelector('[name="Categoria"]').value,
+                valor: parseFloat(document.querySelector('[name="Valor"]').value)
+            };
+
+            let url = id ? `/api/gastosapi/${id}` : '/api/gastosapi';
+            let method = id ? 'PUT' : 'POST';
+
+            fetch(url, {
+                method: method,
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        let modalElement = document.getElementById('modalNovoGasto');
+                        let modal = bootstrap.Modal.getInstance(modalElement);
+                        modal.hide();
+                        location.reload();
+                    } else {
+                        return response.json().then(err => { throw new Error(err.detalhe || 'Erro ao processar requisição'); });
+                    }
+                })
+                .catch(error => {
+                    alert('Erro: ' + error.message);
+                });
         });
     </script>
 }
